@@ -234,7 +234,7 @@ function update()
 	// functionality provided by THREEx.KeyboardState.js
 	if ( keyboard.pressed("1") )
 		//document.getElementById('message').innerHTML = ' Have a nice day! - 1';
-		sphereMaterial.color = 0xffff33;	
+		sphere.material.color.setHex(0xffff33);	
 	if ( keyboard.pressed("2") )
 		document.getElementById('message').innerHTML = ' Have a nice day! - 2 ';	
 		
@@ -247,7 +247,7 @@ function render()
 	renderer.render( scene, camera );
 }
 
-sphereMaterial.color = 0x111323;
+
 
 </script>
 
