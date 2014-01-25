@@ -47,7 +47,7 @@ var clock = new THREE.Clock();
 
 // custom global variables
 var cube;
-var sphereMaterial;
+var sphere;
 // initialization
 init();
 
@@ -157,7 +157,7 @@ function init()
 	// use a "lambert" material rather than "basic" for realistic lighting.
 	//   (don't forget to add (at least one) light!)
 	sphereMaterial = new THREE.MeshLambertMaterial( {color: 0x8888ff} ); 
-	var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+	sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 	sphere.position.set(-400, 500, -50);
 	scene.add(sphere);
 	
