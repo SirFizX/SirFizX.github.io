@@ -240,7 +240,7 @@ function update()
 		//document.getElementById('message').innerHTML = ' Have a nice day! - 1';
 	    counter++;
 	    if (counter>>5) counter=0;
-		sphere.material.color.setHex(counter);
+		sphere.material.color.setHex(colorArray[counter]);
 		sphere.geometry.colorsNeedUpdate = true;
 			
 	if ( keyboard.pressed("2") )
