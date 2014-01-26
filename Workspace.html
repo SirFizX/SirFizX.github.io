@@ -233,11 +233,11 @@ function update()
 	// delta = change in time since last call (in seconds)
 	var delta = clock.getDelta(); 
 
-	document.getElementById('message').innerHTML = sphere.material.color;
+	document.getElementById('message').innerHTML = 'The sphere color is '+sphere.material.color.getHex()+' .';
 	// functionality provided by THREEx.KeyboardState.js
 	if ( keyboard.pressed("1") )
 		//document.getElementById('message').innerHTML = ' Have a nice day! - 1';
-	    var numZeroToFive = Math.floor((6*Math.random()));
+	    var numZeroToFive = Math.floor(((6)*Math.random()));
 	    var randomPick = colorArray[numZeroToFive];
 		sphere.material.color.setHex(randomPick);
 			
