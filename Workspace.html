@@ -237,7 +237,7 @@ function update()
 	// functionality provided by THREEx.KeyboardState.js
 	if ( keyboard.pressed("1") )
 		//document.getElementById('message').innerHTML = ' Have a nice day! - 1';
-	    var numZeroToFive = Math.floor(((6)*Math.random()));
+	    var numZeroToFive = Math.floor((Math.random()*10));;
 	    var randomPick = colorArray[numZeroToFive];
 		sphere.material.color.setHex(randomPick);
 			
