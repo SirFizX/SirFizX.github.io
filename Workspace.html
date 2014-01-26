@@ -50,6 +50,7 @@ var clock = new THREE.Clock();
 var cube;
 var sphere;
 var colorArray = [0xccffcc, 0xffcccc, 0xccccff, 0xff3c4c, 0xfcfc2f, 0xfc2ffc];
+var counter = 0;
 // initialization
 init();
 
@@ -237,9 +238,9 @@ function update()
 	// functionality provided by THREEx.KeyboardState.js
 	if ( keyboard.pressed("1") )
 		//document.getElementById('message').innerHTML = ' Have a nice day! - 1';
-	    var numZeroToFive = Math.floor((Math.random()*10));;
-	    var randomPick = colorArray[2];
-		sphere.material.color.setHex(randomPick);
+	    counter++;
+	    if (counter>>5) counter=0;
+		sphere.material.color.setHex(counter);
 		sphere.geometry.colorsNeedUpdate = true;
 			
 	if ( keyboard.pressed("2") )
