@@ -50,6 +50,7 @@ var clock = new THREE.Clock();
 // custom global variables
 var cube;
 var sphere;
+var colorArray = ['#ccffcc', '#ffcccc', '#ccccff', '#2f3c4c', '#4c3c2f', '#3c2f4c'];
 // initialization
 init();
 
@@ -236,7 +237,6 @@ function update()
 	// functionality provided by THREEx.KeyboardState.js
 	if ( keyboard.pressed("1") )
 		//document.getElementById('message').innerHTML = ' Have a nice day! - 1';
-	    var colorArray = ['#ccffcc', '#ffcccc', '#ccccff', '#2f3c4c', '#4c3c2f', '#3c2f4c'];
 	    var numZeroToFive = Math.floor(Math.random() * 6);
 	    var randomPick = colorArray[numZeroToFive];
 		sphere.material.color.setHex(randomPick);
