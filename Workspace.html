@@ -237,7 +237,8 @@ function update()
 	if ( keyboard.pressed("1") )
 		//document.getElementById('message').innerHTML = ' Have a nice day! - 1';
 	    var colorArray = ['0xccffcc', '0xffcccc', '0xccccff', '0x2f3c4c', '0x4c3c2f', '0x3c2f4c'];
-		sphere.material.color.setHex(colorArray[Math.floor(Math.random() * 6)]);
+	    var randomPick = colorArray[Math.floor(Math.random() * 6)];
+		sphere.material.color.setHex(randomPick);
 		document.getElementById('message').innerHTML = sphere.material.color.getHex();	
 	if ( keyboard.pressed("2") )
 		document.getElementById('message').innerHTML = ' Have a nice day! - 2 ';	
