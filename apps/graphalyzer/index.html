@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ <!-- /*
+*      Copyright (C) 2014
+*      Author:  Eric Eisaman (SirFizX)
+*
+*        This software is provided as-is under GNU Version 3 License.
+*        https://www.gnu.org/licenses/gpl.html
+*        
+*/-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dijkstra's Algorithm</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <p class='centeredImage'><img src='images/logo_name.png' id='logo_name' ></p>
+    <div id='canvas_frame' width='640' height='440'>
+        
+        <canvas id="graphCanvas" width='600' height='400'></canvas>
+        
+    </div>
+    <div id='controls'>
+        <fieldset>
+            <div id='mode'>
+                <div id='modename'>
+                    Add Vertices
+                </div>
+                <div id='usevisual' visibility='hidden'>
+                    <input type="checkbox" class="checkbox" name="usevisual" id="checkbox" />
+                    <label for="y">Use Visual Distance as Weight</label>
+                </div>
+            </div>
+            
+            <br>
+            <div class='btnset'>
+                <button id='btn_mode'>Change Mode</button>
+                <button id='btn_clear'>Clear</button>
+                <button id='btn_json'>Export JSON</button>
+                <button id='btn_png'>Export PNG</button>
+                <button id='btn_start'>Set Start</button>
+                <button id='btn_finish'>Set Finish</button>
+                <button id='btn_compute'>Compute Shortest Path</button>
+            </div>
+            
+            
+            
+        </fieldset>
+        <div id='drop'>
+                <div id="drop_zone">Drop JSON Graph Here</div>
+                <output id="list"></output>
+        </div>
+        
+    </div>
+
+    <script src="js/com/sirfizx/graphs/builders/utils.js"></script>
+    <script src="js/com/sirfizx/graphs/builders/ui2d.js"></script>
+    <script src="js/com/sirfizx/graphs/builders/vertex2d.js"></script>
+    <script src="js/com/sirfizx/graphs/builders/edge2d.js"></script>
+    <script src="js/com/sirfizx/graphs/builders/graph.js"></script>
+    <script src="js/com/sirfizx/graphs/builders/main.js"></script>
+  </body>
+</html>
