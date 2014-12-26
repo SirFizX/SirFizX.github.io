@@ -148,7 +148,7 @@ Graph.prototype.edgeExists = function(b){
         console.log(nm1 + ' '+nm2+' '+n1+' '+n2);
         if ( (nm1===n1||nm1===n2) && (nm2===n1||nm2===n2) ){
              match = true;
-             if(!b) alert('Only 1 edge allowed between any 2 vertices.');
+             //alert('Only 1 edge allowed between any 2 vertices.');
              this.edgeVerts = [];
         }
     }
