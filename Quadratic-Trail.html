@@ -139,7 +139,7 @@ function animate()
 
 function update()
 {
-	var t = clock.getElapsedTime();
+	var t = clock.getElapsedTime() -60;
 	var tSquared = Math.pow(t,2);
 	sphere.position.x = xScaleFactor * t;
 	sphere.position.y = yScaleFactor * tSquared + k;
