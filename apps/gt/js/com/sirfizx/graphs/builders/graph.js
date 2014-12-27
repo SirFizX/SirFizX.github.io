@@ -282,7 +282,7 @@ Graph.prototype.setFinish = function(e){
 Graph.prototype.drawLoadedGraph = function(){
     //alert(this.vertices[0].connections[3].name);
     var c = this.vertices;
-    this.current_letter_index = c.length-1; // so we can add vertices after load
+    this.current_letter_index = c.length; // so we can add vertices after load
     var s = this.ui.vertex_sprites;
     for(var i = 0; i<c.length;i++){
         var v2d = new Vertex2D(new Vec2D(c[i].x,c[i].y),c[i].name);
