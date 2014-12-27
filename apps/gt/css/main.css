@@ -62,9 +62,9 @@ label { clear:none; display:inline-block; padding: 2px 1em 0 0; color:red;}
  
  #drop_zone {
 border: 2px dashed #bbb;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-radius: 5px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
 padding: 25px;
 text-align: center;
 font: 20pt bold 'Vollkorn';
@@ -75,6 +75,7 @@ color: #bbb;
 padding: 10px;
 border: 1px solid #ccc;
 background-color:white;
+border-radius: 10px;
 }
  
  
