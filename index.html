@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/prism.css" media="print" />
+    <script type="text/javascript" src="js/prism.js"></script>
 
     <title>Sirfizx.github.io by SirFizX</title>
   </head>
@@ -32,7 +34,7 @@
 
 <p>Practical application is a great way of developing and assessing skills and conceptual understanding. Consider the following code block taken from a lesson on one dimensional scaling transformations of quadratic functions in parametric form:</p>
 
-<pre><code>var clock = new THREE.Clock();
+<pre><code class="language-javascript">var clock = new THREE.Clock();
 animate(){
 clock.getDelta();
 object3D.position.x = timeScaleFactor * clock.getElapsedTime();
