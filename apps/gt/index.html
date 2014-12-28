@@ -43,11 +43,16 @@
     <p>The following pseudo-code illustrates a recursive routine that solves for the shortest path, within a vertex-edge graph, from the designated start vertex to the designated finish vertex, using Dijkstra's algorithm.</p>
 
     <pre><code>
-    Step 1: Determine the focus vertex. (initially it's the start vertex)
-    Step 2: Assign every non-completed vertex a value representing it's weight, or cost, from the start vertex and the name of the last vertex in the path. The start vertex is assigned a value of zero. Unreachable vertices are assigned a value of infinity. All other vertices are assigned the minimum known edge value connecting them to the start.
-    Step 3: The minimum valued non-completed vertex becomes the next focus vertex.
-    Step 4: Repeat steps 2 and 3 until the finish vertex is reached.
-    Step 5: The shortest path is defined by a sequence of vertex names from the start to the finish by going backwards through the last vertex names. 
+Step 1: Determine the focus vertex. (initially it's the start vertex)
+Step 2: Assign every non-completed vertex a value representing it's 
+weight, or cost, from the start vertex and the name of the last vertex
+in the path. The start vertex is assigned a value of zero. Unreachable 
+vertices are assigned a value of infinity. All other vertices are 
+assigned the minimum known edge value connecting them to the start.
+Step 3: The minimum valued non-completed vertex becomes the next focus vertex.
+Step 4: Repeat steps 2 and 3 until the finish vertex is reached.
+Step 5: The shortest path is defined by a sequence of vertex names from
+the start to the finish by going backwards through the last vertex names. 
     </code></pre>  
 
     <p>The following is javascript function, based upon the above pseudo-code, which solves for the shortest path, within a vertex-edge graph, from the designated start vertex to the designated finish vertex, using Dijkstra's algorithm.</p>
