@@ -36,9 +36,10 @@
 
 <pre><code class="language-javascript">var clock = new THREE.Clock();
 animate(){
-clock.getDelta();
-object3D.position.x = timeScaleFactor * clock.getElapsedTime();
-object3D.position.y = Math.pow(clock.getElapsedTime(), 2);
+  var t = clock.getElapsedTime() -60;
+  var tSquared = Math.pow(t,2);
+  sphere.position.x = xScaleFactor * t;
+  sphere.position.y = yScaleFactor * tSquared + k;
 }
 </code></pre>
 
