@@ -1,9 +1,0 @@
-.demo-iframe-holder {
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-}
-
-.demo-iframe-holder iframe {
-  height: 800px;
-  width: 512px;
-}

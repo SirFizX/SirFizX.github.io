@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/demo.css"  />
+
+    <title>SirFizX Cam App</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Sirfizx Manor</h1>
+        <h2>Cam App</h2>
+
+        <section id="downloads">
+          <a href="http://sirfizx.github.io" class="btn btn-github"><span class="icon"></span>Home</a>
+          <a href="/apps/gt/" class="btn btn-github"><span class="icon"></span>Graph Theory</a>
+        </section>
+      </div>
+    </header>
+
+<div class="container">
+<section id="overview">
+        <h3>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Using the Camera</h3>
+
+<p>Camera app:</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd00cd">window</span><span style="color: #cccccc">.addEventListener(</span><span style="color: #cd0000">&quot;DOMContentLoaded&quot;</span><span style="color: #cccccc">,</span> <span style="color: #00cd00">function</span><span style="color: #cccccc">()</span> <span style="color: #cccccc">{</span>
+  <span style="color: #000080">// Grab elements, create settings, etc.</span>
+  <span style="color: #00cd00">var</span> <span style="color: #cccccc">canvas</span> <span style="color: #3399cc">=</span> <span style="color: #cd00cd">document</span><span style="color: #cccccc">.getElementById(</span><span style="color: #cd0000">&quot;canvas&quot;</span><span style="color: #cccccc">),</span>
+  <span style="color: #cccccc">context</span> <span style="color: #3399cc">=</span> <span style="color: #cccccc">canvas.getContext(</span><span style="color: #cd0000">&quot;2d&quot;</span><span style="color: #cccccc">),</span>
+  <span style="color: #cccccc">video</span> <span style="color: #3399cc">=</span> <span style="color: #cd00cd">document</span><span style="color: #cccccc">.getElementById(</span><span style="color: #cd0000">&quot;video&quot;</span><span style="color: #cccccc">),</span>
+  <span style="color: #cccccc">videoObj</span> <span style="color: #3399cc">=</span> <span style="color: #cccccc">{</span> <span style="color: #cd0000">&quot;video&quot;</span><span style="color: #3399cc">:</span> <span style="color: #cdcd00">true</span> <span style="color: #cccccc">},</span>
+  <span style="color: #cccccc">errBack</span> <span style="color: #3399cc">=</span> <span style="color: #00cd00">function</span><span style="color: #cccccc">(error)</span> <span style="color: #cccccc">{console.log(</span><span style="color: #cd0000">&quot;Video capture error: &quot;</span><span style="color: #cccccc">,</span> <span style="color: #cccccc">error.code);};</span>
+
+<span style="color: #000080">// Put video listeners into place</span>
+<span style="color: #cdcd00">if</span><span style="color: #cccccc">(navigator.getUserMedia)</span> <span style="color: #cccccc">{</span> <span style="color: #000080">// Standard</span>
+  <span style="color: #cccccc">navigator.getUserMedia(videoObj,</span> <span style="color: #00cd00">function</span><span style="color: #cccccc">(stream)</span> <span style="color: #cccccc">{</span>
+  <span style="color: #cccccc">video.src</span> <span style="color: #3399cc">=</span> <span style="color: #cccccc">stream;</span>
+  <span style="color: #cccccc">video.play();</span>
+  <span style="color: #cccccc">},</span> <span style="color: #cccccc">errBack);</span>
+  <span style="color: #cccccc">}</span> <span style="color: #cdcd00">else</span> <span style="color: #cdcd00">if</span><span style="color: #cccccc">(navigator.webkitGetUserMedia)</span> <span style="color: #cccccc">{</span> <span style="color: #000080">// WebKit-prefixed</span>
+  <span style="color: #cccccc">navigator.webkitGetUserMedia(videoObj,</span> <span style="color: #00cd00">function</span><span style="color: #cccccc">(stream){</span>
+  <span style="color: #cccccc">video.src</span> <span style="color: #3399cc">=</span> <span style="color: #cd00cd">window</span><span style="color: #cccccc">.webkitURL.createObjectURL(stream);</span>
+  <span style="color: #cccccc">video.play();</span>
+  <span style="color: #cccccc">},</span> <span style="color: #cccccc">errBack);</span>
+  <span style="color: #cccccc">}</span> <span style="color: #cdcd00">else</span> <span style="color: #cdcd00">if</span><span style="color: #cccccc">(navigator.mozGetUserMedia)</span> <span style="color: #cccccc">{</span> <span style="color: #000080">// WebKit-prefixed</span>
+  <span style="color: #cccccc">navigator.mozGetUserMedia(videoObj,</span> <span style="color: #00cd00">function</span><span style="color: #cccccc">(stream){</span>
+  <span style="color: #cccccc">video.src</span> <span style="color: #3399cc">=</span> <span style="color: #cd00cd">window</span><span style="color: #cccccc">.URL.createObjectURL(stream);</span>
+  <span style="color: #cccccc">video.play();</span>
+  <span style="color: #cccccc">},</span> <span style="color: #cccccc">errBack);</span>
+  <span style="color: #cccccc">}</span>
+
+<span style="color: #000080">// Trigger photo take</span>
+  <span style="color: #cd00cd">document</span><span style="color: #cccccc">.getElementById(</span><span style="color: #cd0000">&quot;snap&quot;</span><span style="color: #cccccc">).addEventListener(</span><span style="color: #cd0000">&quot;click&quot;</span><span style="color: #cccccc">,</span> <span style="color: #00cd00">function</span><span style="color: #cccccc">()</span> <span style="color: #cccccc">{</span>
+  <span style="color: #cccccc">context.drawImage(video,</span> <span style="color: #cd00cd">0</span><span style="color: #cccccc">,</span> <span style="color: #cd00cd">0</span><span style="color: #cccccc">,</span> <span style="color: #cd00cd">640</span><span style="color: #cccccc">,</span> <span style="color: #cd00cd">480</span><span style="color: #cccccc">);</span>
+  <span style="color: #cccccc">});</span>
+  <span style="color: #cccccc">},</span> <span style="color: #cdcd00">false</span><span style="color: #cccccc">);</span>
+</pre></div>
+
+
+
+
+<p>Let's have some fun with the camera.</p>
+
+</section>
+
+<section id="application">
+        <h3>
+<a name="application" class="anchor" href="#application"><span class="octicon octicon-link"></span></a>Application</h3>
+
+<canvas id='canvas'></canvas>
+
+
+</section>
+
+</div>
+
+<script type="text/javascript" src='js/cam.js'></script>
+    
+  </body>
+</html>
