@@ -31,7 +31,7 @@
         <h3>
 <a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Linear Algebra</h3>
 
-<p>First, let's consider a system of two linear equations with two unknowns. Namely, \(2x-y=0\) and \(-x+2y=3\). We can represent these equations graphically as:
+<p>First, let's consider a system of two linear equations with two unknowns. Namely, <span style='color:#ff0000'>\(2x-y=0\)</span> and <span style='color:#ff0000'>\(-x+2y=3\)</span> . We can represent these equations graphically as:
 
 <div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
 <script type="text/javascript">
@@ -40,7 +40,7 @@
  var li2 = board.create('line',[[0,1.5],[2,3.5]], {strokeColor:'#0000ff',strokeWidth:2});
 </script>
 
-This same set of equations may be represented as one linear algebra equation of the form \(A\overrightharpup{x}=\overrightharpup{b}\) such as shown below.
+This same set of equations may be represented as one linear algebra equation of the form <span style='color:#ff0000'>\(A\overrightharpup{x}=\overrightharpup{b}\)</span> such as shown below.
 
 $$ 
 \left[ \begin{array}{cc} 2 & -1 \\ -1 & 2 \end{array} \right] \left[ \begin{array}{c} x \\ y \end{array} \right]= \left[ \begin{array}{c} 0 \\ 3 \end{array} \right] 
@@ -51,7 +51,19 @@ $$
 x\left[ \begin{array}{c} 2 \\ -1\end{array} \right] + y\left[ \begin{array}{c} -1 \\ 2 \end{array} \right]= \left[ \begin{array}{c} 0 \\ 3 \end{array} \right] 
 $$
 
-The column vector form expresses the right hand vector solution as a linear combination of the columns shown in the original linear algebra equation.
+The column vector form expresses the right hand vector solution as a linear combination of the columns shown in the original linear algebra equation. We can represent this linear algebra column vector form equation geometrically as:
+
+<div id="box2" class="jxgbox" style="width:500px; height:500px;"></div>
+<script type="text/javascript">
+ var board = JXG.JSXGraph.initBoard('box2', {boundingbox: [-3, 3, 3, -3], axis:true});
+ var t1 = JXG.Turtle(board,[0,0,0]);
+ t1.pd();
+ t1.moveTo([2,-1]);
+ var t2 = JXG.Turtle(board,[0,0,90]);
+ t2.pd();
+ t2.moveTo([-1,2]);
+});
+</script>
 
 </p>
 
