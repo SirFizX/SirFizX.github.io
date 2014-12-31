@@ -6,7 +6,8 @@
 
     <link rel="stylesheet" type="text/css" href="../../stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../../stylesheets/pygment_trac.css" media="screen" />
-  
+    <link rel="stylesheet" type="text/css" href="../../css/jsxgraph.css" />
+ 	<script type="text/javascript" src="../../js/math/jsxgraphcore.js"></script>
 
     <title>SirFizX Linear Algebra</title>
   </head>
@@ -33,14 +34,14 @@
 <p>A segway into linear algebra:</p>
 
 
-<p>Let's have some fun with linear algebra. First, let's introduce our first family of equations in linear algebra.
-$$
-2x-y=0
-$$
-and
-$$
--x+2y=3
-$$
+<p>Let's have some fun with linear algebra. First, let's consider a system of two linear equations with two unknowns. Namely, $2x-y=0$ and $-x+2y=3$. We can represent these equations graphically as:
+
+<div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+<script type="text/javascript">
+ var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10], axis:true});
+ var li = b.create('line',[[0,0],[2,4]], {strokeColor:'#00ff00',strokeWidth:2});
+ var li2 = b.create('line',[[0,1.5],[2,3.5]], {strokeColor:'#0000ff',strokeWidth:2});
+</script>
 
 $$ 
 \left[ \begin{array}{cc} 1 & 2 \\ 3 & 4 \end{array} \right] \overrightarrow{x}= \left[ \begin{array}{c} 3 \\ 1 \end{array} \right] 
