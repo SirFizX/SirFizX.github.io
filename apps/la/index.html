@@ -55,7 +55,7 @@ The column vector form expresses the right hand vector solution as a linear comb
 
 <div id="box2" class="jxgbox" style="width:500px; height:500px;"></div>
 <script type="text/javascript">
- var board = JXG.JSXGraph.initBoard('box2', {boundingbox: [-3, 3, 3, -3], axis:true});
+ var board = JXG.JSXGraph.initBoard('box2', {boundingbox: [-4, 4, 4, -4], axis:true});
  var t1 = board.create('turtle');
  t1.pd();
  t1.lookTo([2,-1]);
@@ -64,6 +64,20 @@ The column vector form expresses the right hand vector solution as a linear comb
  t2.pd();
  t2.lookTo([-1,2]);
  t2.moveTo([-1,2]);
+ var t3 = board.create('turtle');
+ t3.pu();
+ t3.setPenColor('red');
+ t3.moveTo([2,-1]);
+ t3.pd();
+ t3.lookTo([1,1]);
+ t3.moveTo([1,1]);
+ var t4 = board.create('turtle');
+ t4.pu();
+ t4.setPenColor('red');
+ t4.moveTo([1,1]);
+ t4.pd();
+ t4.lookTo([0,3]);
+ t4.moveTo([0,3]);
 </script>
 
 </p>
