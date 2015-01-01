@@ -56,10 +56,10 @@ The column vector form expresses the right hand vector solution as a linear comb
 <div id="box2" class="jxgbox" style="width:500px; height:500px;"></div>
 <script type="text/javascript">
  var board = JXG.JSXGraph.initBoard('box2', {boundingbox: [-3, 3, 3, -3], axis:true});
- var t1 = JXG.Turtle(board,[0,0,0],{curveType:functiongraph});
+ var t1 = board.create('turtle');
  t1.pd();
  t1.moveTo([2,-1]);
- var t2 = JXG.Turtle(board,[0,0,90],{curveType:functiongraph});
+ var t2 = board.create('turtle');
  t2.pd();
  t2.moveTo([-1,2]);
 </script>
