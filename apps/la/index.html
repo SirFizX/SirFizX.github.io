@@ -40,7 +40,7 @@
  var li2 = board.create('line',[[0,1.5],[2,3.5]], {strokeColor:'#0000ff',strokeWidth:2});
 </script>
 
-This same set of equations may be represented as one matrix form linear algebra equation represented generally as<span style='color:#ff0000'>\(A\overrightarrow{x}=\overrightarrow{b}\)</span> or according to our example as:
+This same set of equations may be represented as one matrix form linear algebra equation represented generally as <span style='color:#ff0000'>\(A\overrightarrow{x}=\overrightarrow{b}\)</span> or according to our example as:
 
 $$ 
 \left[ \begin{array}{cc} 2 & -1 \\ -1 & 2 \end{array} \right] \left[ \begin{array}{c} x \\ y \end{array} \right]= \left[ \begin{array}{c} 0 \\ 3 \end{array} \right] 
@@ -56,10 +56,10 @@ The column vector form expresses the right hand vector solution as a linear comb
 <div id="box2" class="jxgbox" style="width:500px; height:500px;"></div>
 <script type="text/javascript">
  var board = JXG.JSXGraph.initBoard('box2', {boundingbox: [-3, 3, 3, -3], axis:true});
- var t1 = JXG.Turtle(board,[0,0,0]);
+ var t1 = JXG.Turtle(board,[0,0,0],[curveType:functiongraph]);
  t1.pd();
  t1.moveTo([2,-1]);
- var t2 = JXG.Turtle(board,[0,0,90]);
+ var t2 = JXG.Turtle(board,[0,0,90],[curveType:functiongraph]);
  t2.pd();
  t2.moveTo([-1,2]);
 </script>
