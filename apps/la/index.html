@@ -96,9 +96,16 @@ The column vector form expresses the right hand vector solution as a linear comb
         <h3>
 <a name="3d" class="anchor" href="#3d"><span class="octicon octicon-link"></span></a>3d Case</h3>
 <p>
-MATLAB Example
+<h3>MATLAB Example</h3>
+
+Enter the following into the Octave MATLAB environment below: 
+A = [ 1 2 4 4; 1 4 5 2; 2 7 8 -1]
+B = rref(A)
+
 <iframe src="http://www.tutorialspoint.com/execute_matlab_online.php" width='800' height='800'></iframe>
 
+The preceding example is equivalent to solving the following equation:
+<span style='color:red'>\( \left[ \begin{array}{ccc} 1 2 4 \\ 1 4 5 \\ 2 7 8\end{array} \right] \begin{array}{c} x \\ y \\ z \end{array} \right]= \left[ \begin{array}{c} 4 \\ 2 \\ -1 \end{array} \right]  \)</span>
 
 </p>
 
